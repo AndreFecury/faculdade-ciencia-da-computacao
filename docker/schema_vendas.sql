@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS vendas CASCADE;
+DROP TABLE IF EXISTS vendedores CASCADE;
+
+CREATE TABLE vendedores (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    regiao VARCHAR(50)
+);
+
+CREATE TABLE vendas (
+    id SERIAL PRIMARY KEY,
+    vendedor_id INT REFERENCES vendedores(id) ON DELETE CASCADE,
+    valor NUMERIC(10,2) NOT NULL,
+    data_venda DATE DEFAULT CURRENT_DATE
+);
