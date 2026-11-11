@@ -1,0 +1,30 @@
+# Compilados / binários
+*.exe
+*.o
+*.class
+bin/
+target/
+out/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# IDE
+.idea/
+*.iml
+
+# Banco local / dados de teste
+*.db
+*.sqlite
+
+# Documentos (provas, enunciados em PDF)
+*.pdf
+*.docx
+
+# SO
+desktop.ini
+Thumbs.db
+.DS_Store
